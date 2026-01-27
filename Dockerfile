@@ -1,14 +1,17 @@
-# 1. Dùng Java 21 (đúng với Spring Boot 3)
+# 1. Java 21 cho Spring Boot 3
 FROM eclipse-temurin:21-jdk
 
-# 2. Set thư mục làm việc
+# 2. Thư mục làm việc
 WORKDIR /app
 
-# 3. Copy toàn bộ source code
+# 3. Copy source code
 COPY . .
 
-# 4. Build project bằng Maven Wrapper
+# 🔥 4. Cấp quyền chạy cho mvnw (QUAN TRỌNG)
+RUN chmod +x mvnw
+
+# 5. Build project
 RUN ./mvnw clean package -DskipTests
 
-# 5. Chạy file jar
+# 6. Chạy app
 CMD ["java", "-jar", "target/*.jar"]
