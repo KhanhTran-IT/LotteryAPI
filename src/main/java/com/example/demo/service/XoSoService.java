@@ -16,7 +16,7 @@ public class XoSoService {
 
     public List<ProvinceResult> getMienNam() throws Exception {
 
-        Document doc = Jsoup.connect("https://xoso.com.vn/xsmn")
+        Document doc = Jsoup.connect("https://xoso.com.vn/xo-so-mien-trung/xsmt-p1.html")
                 .userAgent("Mozilla/5.0")
                 .timeout(15000)
                 .get();
