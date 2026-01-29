@@ -11,4 +11,4 @@ API đặc biệt phù hợp cho:
 ---
 
 ## 🚀 Demo Endpoint
-
+GET https://lotteryapi-qo0e.onrender.com/api/xoso/mien-nam
